@@ -7,6 +7,11 @@
 
 import Foundation
 
+struct VideosResponse:Decodable {
+    
+    var items: [Video]
+    
+}
 
 struct Video:Decodable {
     
@@ -27,7 +32,7 @@ struct Snippet:Decodable {
 
 struct Thumbnail:Decodable {
     
-    var default_image: ImageObject,
+    var default_image: ImageObject
     var medium_imagee:ImageObject
     var high_image:ImageObject
     var standard_image: ImageObject

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC044AA827031F490037EBCB /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA727031F490037EBCB /* VideoModel.swift */; };
+		FC044AAA27044D5F0037EBCB /* VideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA927044D5F0037EBCB /* VideoRequest.swift */; };
 		FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */; };
 		FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907A26FB4683002B26F3 /* ContentView.swift */; };
 		FCBE907D26FB4685002B26F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE907C26FB4685002B26F3 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		FC044AA727031F490037EBCB /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		FC044AA927044D5F0037EBCB /* VideoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRequest.swift; sourceTree = "<group>"; };
 		FCBE907526FB4683002B26F3 /* MovieSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSharingApp.swift; sourceTree = "<group>"; };
 		FCBE907A26FB4683002B26F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				FCBE907C26FB4685002B26F3 /* Assets.xcassets */,
 				FCBE908126FB4685002B26F3 /* Info.plist */,
 				FCBE907E26FB4685002B26F3 /* Preview Content */,
+				FC044AA927044D5F0037EBCB /* VideoRequest.swift */,
 			);
 			path = MovieSharing;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */,
+				FC044AAA27044D5F0037EBCB /* VideoRequest.swift in Sources */,
 				FC044AA827031F490037EBCB /* VideoModel.swift in Sources */,
 				FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */,
 			);
