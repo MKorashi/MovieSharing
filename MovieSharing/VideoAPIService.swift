@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum VideoError:Error{
+enum VideoError: Error {
     case noDataAvailable
     case canNotProcessData
     
 }
 
-struct VideoRequest {
+struct VideoAPIService {
     let resourceURL: URL
     
-    init(){
+    init() {
         let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
         
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
@@ -24,9 +24,9 @@ struct VideoRequest {
         self.resourceURL = resourceURL
     }
     
-    func getVideos (completion: @escaping(Result<[Video],VideoError>)-> Void){
+    func getVideos (completion: @escaping(Result<[Video],VideoError>)-> Void) {
         
-        let dataTask = URLSession.shared.dataTask(with: resourceURL){
+        let dataTask = URLSession.shared.dataTask(with: resourceURL) {
             data, _, _ in
             
             guard let jsonData = data else {
@@ -44,6 +44,5 @@ struct VideoRequest {
             }
         }
         dataTask.resume()
-        
     }
 }

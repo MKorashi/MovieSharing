@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct MovieSharingApp: App {
+    @StateObject var videoViewModel = VideoViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()

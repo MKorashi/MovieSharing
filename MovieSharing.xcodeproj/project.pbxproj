@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC044AA827031F490037EBCB /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA727031F490037EBCB /* VideoModel.swift */; };
-		FC044AAA27044D5F0037EBCB /* VideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA927044D5F0037EBCB /* VideoRequest.swift */; };
+		FC044AA827031F490037EBCB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA727031F490037EBCB /* Video.swift */; };
+		FC044AAA27044D5F0037EBCB /* VideoAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA927044D5F0037EBCB /* VideoAPIService.swift */; };
 		FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */; };
 		FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907A26FB4683002B26F3 /* ContentView.swift */; };
 		FCBE907D26FB4685002B26F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE907C26FB4685002B26F3 /* Assets.xcassets */; };
 		FCBE908026FB4685002B26F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE907F26FB4685002B26F3 /* Preview Assets.xcassets */; };
+		FCFBD03A2706F7B800D8B9CB /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBD0392706F7B800D8B9CB /* VideoResponse.swift */; };
+		FCFBD03C2706F7E400D8B9CB /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBD03B2706F7E400D8B9CB /* Snippet.swift */; };
+		FCFBD03E2706F85B00D8B9CB /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBD03D2706F85B00D8B9CB /* Thumbnail.swift */; };
+		FCFBD0402706F87800D8B9CB /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBD03F2706F87800D8B9CB /* ImageObject.swift */; };
+		FCFBD0422706F8CF00D8B9CB /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFBD0412706F8CF00D8B9CB /* VideoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC044AA727031F490037EBCB /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
-		FC044AA927044D5F0037EBCB /* VideoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRequest.swift; sourceTree = "<group>"; };
+		FC044AA727031F490037EBCB /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		FC044AA927044D5F0037EBCB /* VideoAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIService.swift; sourceTree = "<group>"; };
 		FCBE907526FB4683002B26F3 /* MovieSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSharingApp.swift; sourceTree = "<group>"; };
 		FCBE907A26FB4683002B26F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FCBE907C26FB4685002B26F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCBE907F26FB4685002B26F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FCBE908126FB4685002B26F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFBD0392706F7B800D8B9CB /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
+		FCFBD03B2706F7E400D8B9CB /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
+		FCFBD03D2706F85B00D8B9CB /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		FCFBD03F2706F87800D8B9CB /* ImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		FCFBD0412706F8CF00D8B9CB /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +68,16 @@
 			children = (
 				FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */,
 				FCBE907A26FB4683002B26F3 /* ContentView.swift */,
-				FC044AA727031F490037EBCB /* VideoModel.swift */,
+				FC044AA727031F490037EBCB /* Video.swift */,
 				FCBE907C26FB4685002B26F3 /* Assets.xcassets */,
 				FCBE908126FB4685002B26F3 /* Info.plist */,
 				FCBE907E26FB4685002B26F3 /* Preview Content */,
-				FC044AA927044D5F0037EBCB /* VideoRequest.swift */,
+				FC044AA927044D5F0037EBCB /* VideoAPIService.swift */,
+				FCFBD0392706F7B800D8B9CB /* VideoResponse.swift */,
+				FCFBD03B2706F7E400D8B9CB /* Snippet.swift */,
+				FCFBD03D2706F85B00D8B9CB /* Thumbnail.swift */,
+				FCFBD03F2706F87800D8B9CB /* ImageObject.swift */,
+				FCFBD0412706F8CF00D8B9CB /* VideoViewModel.swift */,
 			);
 			path = MovieSharing;
 			sourceTree = "<group>";
@@ -144,10 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFBD03A2706F7B800D8B9CB /* VideoResponse.swift in Sources */,
+				FCFBD0422706F8CF00D8B9CB /* VideoViewModel.swift in Sources */,
 				FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */,
-				FC044AAA27044D5F0037EBCB /* VideoRequest.swift in Sources */,
-				FC044AA827031F490037EBCB /* VideoModel.swift in Sources */,
+				FC044AAA27044D5F0037EBCB /* VideoAPIService.swift in Sources */,
+				FCFBD03C2706F7E400D8B9CB /* Snippet.swift in Sources */,
+				FC044AA827031F490037EBCB /* Video.swift in Sources */,
 				FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */,
+				FCFBD0402706F87800D8B9CB /* ImageObject.swift in Sources */,
+				FCFBD03E2706F85B00D8B9CB /* Thumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
