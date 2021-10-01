@@ -13,6 +13,5 @@ struct Snippet: Decodable {
     var title: String
     var description: String
     var thumbnail: Thumbnail
-    
 }
 

@@ -12,6 +12,5 @@ struct Thumbnail: Decodable {
     var defaultImage: ImageObject
     var mediumImage: ImageObject
     var highImage: ImageObject
-    var standardImage: ImageObject
-    
+    var standardImage: ImageObject    
 }

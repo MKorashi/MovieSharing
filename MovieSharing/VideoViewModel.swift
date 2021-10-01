@@ -20,7 +20,5 @@ class VideoViewModel: ObservableObject {
         self.apiService.getVideos {
             (data) in print(data)
         }
-    }
-    
-    
+    } 
 }

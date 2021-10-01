@@ -7,10 +7,8 @@
 
 import Foundation
 
-
 struct Video: Decodable {
     
     var id: String
     var snippet:Snippet
-    
 }

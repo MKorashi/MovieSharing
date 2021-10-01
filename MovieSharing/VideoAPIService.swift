@@ -10,7 +10,6 @@ import Foundation
 enum VideoError: Error {
     case noDataAvailable
     case canNotProcessData
-    
 }
 
 struct VideoAPIService {
@@ -39,7 +38,8 @@ struct VideoAPIService {
                 let videosResponse = try decoder.decode(VideosResponse.self, from: jsonData)
                 let videos_list = videosResponse.items
                 completion(.success(videos_list))
-            } catch{
+            }
+            catch {
                 completion(.failure(.canNotProcessData))
             }
         }

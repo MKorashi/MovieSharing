@@ -10,7 +10,6 @@ import Foundation
 struct ImageObject: Decodable {
     
     var url: String
-    var width:Double
-    var height: Double
-    
+    var width: Double
+    var height: Double    
 }
