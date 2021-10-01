@@ -9,6 +9,8 @@ import Foundation
 
 struct Video: Decodable {
     
+    // MARK: - Properties
+    
     var id: String
     var snippet:Snippet
 }

@@ -9,5 +9,7 @@ import Foundation
 
 struct VideosResponse: Decodable {
     
+    // MARK: - Properties
+    
     var items: [Video]
 }

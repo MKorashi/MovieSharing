@@ -7,13 +7,22 @@
 
 import Foundation
 
-enum VideoError: Error {
-    case noDataAvailable
-    case canNotProcessData
-}
+
 
 struct VideoAPIService {
+    
+    // MARK: - Types
+    
+    enum VideoError: Error {
+        case noDataAvailable
+        case canNotProcessData
+    }
+    
+    // MARK: - Properties
+    
     let resourceURL: URL
+    
+    // MARK: - Public API
     
     init() {
         let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"

@@ -9,6 +9,8 @@ import Foundation
 
 struct Thumbnail: Decodable {
     
+    // MARK: - Properties
+    
     var defaultImage: ImageObject
     var mediumImage: ImageObject
     var highImage: ImageObject

@@ -9,6 +9,8 @@ import Foundation
 
 struct Snippet: Decodable {
     
+    // MARK: - Properties
+    
     var publishedAt: String
     var title: String
     var description: String

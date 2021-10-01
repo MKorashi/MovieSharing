@@ -9,6 +9,8 @@ import Foundation
 
 struct ImageObject: Decodable {
     
+    // MARK: - Properties
+    
     var url: String
     var width: Double
     var height: Double    

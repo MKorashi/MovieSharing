@@ -9,7 +9,11 @@ import Foundation
 
 class VideoViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     private var apiService: VideoAPIService
+    
+    // MARK: - Public API
     
     init() {
         self.apiService = VideoAPIService()
