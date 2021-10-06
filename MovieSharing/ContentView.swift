@@ -17,9 +17,9 @@ struct ContentView: View {
     }
 }
 
+// MARK: - Previews
+
 struct ContentView_Previews: PreviewProvider {
-    
-    // MARK: - Properties
     
     static var previews: some View {
         ContentView()

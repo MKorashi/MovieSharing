@@ -11,12 +11,12 @@ class VideoViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    private var apiService: VideoAPIService
+    private var apiService: APIManager
     
     // MARK: - Public API
     
     init() {
-        self.apiService = VideoAPIService()
+        self.apiService = APIManager()
         getVideos()
     }
     

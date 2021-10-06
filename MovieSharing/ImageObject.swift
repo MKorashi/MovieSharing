@@ -9,9 +9,17 @@ import Foundation
 
 struct ImageObject: Decodable {
     
+    // MARK: - Types
+    
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "url"
+        case imageWidth = "width"
+        case imageHeight = "height"
+    }
+    
     // MARK: - Properties
     
-    var url: String
-    var width: Double
-    var height: Double    
+    var imageUrl: String?
+    var imageWidth: Double?
+    var imageHeight: Double?
 }

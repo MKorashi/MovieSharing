@@ -7,32 +7,25 @@
 
 import Foundation
 
-
-
-struct VideoAPIService {
+class APIManager {
     
     // MARK: - Types
     
     enum VideoError: Error {
         case noDataAvailable
         case canNotProcessData
+        case emptyData
     }
-    
-    // MARK: - Properties
-    
-    let resourceURL: URL
-    
+
     // MARK: - Public API
     
-    init() {
+    func getVideos (completion: @escaping (Result<[Video],VideoError>) -> Void) {
+        
         let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
         
-        guard let resourceURL = URL(string: resourceString) else {fatalError()}
-        
-        self.resourceURL = resourceURL
-    }
-    
-    func getVideos (completion: @escaping(Result<[Video],VideoError>)-> Void) {
+        guard let resourceURL = URL(string: resourceString) else {
+            fatalError()
+        }
         
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {
             data, _, _ in
@@ -45,8 +38,11 @@ struct VideoAPIService {
             do {
                 let decoder = JSONDecoder()
                 let videosResponse = try decoder.decode(VideosResponse.self, from: jsonData)
-                let videos_list = videosResponse.items
-                completion(.success(videos_list))
+                guard let videosListNotNil = videosResponse.videos else {
+                    completion(.failure(.emptyData))
+                    return
+                }
+                completion(.success(videosListNotNil))
             }
             catch {
                 completion(.failure(.canNotProcessData))

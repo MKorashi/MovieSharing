@@ -9,7 +9,13 @@ import Foundation
 
 struct VideosResponse: Decodable {
     
+    // MARK: - Types
+    
+    enum CodingKeys: String, CodingKey {
+        case videos = "items"
+    }
+    
     // MARK: - Properties
     
-    var items: [Video]
+    var videos: [Video]?
 }
