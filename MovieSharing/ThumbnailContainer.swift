@@ -12,16 +12,16 @@ struct ThumbnailContainer: Decodable {
     // MARK: - Types
     
     enum CodingKeys: String, CodingKey {
-        case defaultImageData = "default"
-        case mediumImageData = "medium"
-        case highImageData = "high"
-        case standardImageData = "standard"
+        case defaultResolutionImage = "default"
+        case mediumResolutionImage = "medium"
+        case highResolutionImage = "high"
+        case standardResolutionImage = "standard"
     }
     
     // MARK: - Properties
     
-    var defaultImageData: ImageData?
-    var mediumImageData: ImageData?
-    var highImageData: ImageData?
-    var standardImageData: ImageData?
+    var defaultResolutionImage: ImageData?
+    var mediumResolutionImage: ImageData?
+    var highResolutionImage: ImageData?
+    var standardResolutionImage: ImageData?
 }

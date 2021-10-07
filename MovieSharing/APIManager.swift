@@ -11,7 +11,7 @@ class APIManager {
     
     // MARK: - Properties
     
-    static let sharedAPIManager = APIManager()
+    static let shared = APIManager()
     
     // MARK: - Types
     //FIX ME:
@@ -23,7 +23,7 @@ class APIManager {
     
     // MARK: - Private API
     
-    private init(){}
+    private init() {}
 
     // MARK: - Public API
     
