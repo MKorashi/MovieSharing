@@ -15,7 +15,7 @@ class VideoViewModel: ObservableObject {
         fetchVideos()
     }
     
-    func fetchVideos(){
+    func fetchVideos() {
         APIManager.sharedAPIManager.fetchVideos {
             (data) in print(data)
         }
