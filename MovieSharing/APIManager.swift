@@ -9,22 +9,29 @@ import Foundation
 
 class APIManager {
     
-    // MARK: - Types
+    // MARK: - Properties
     
+    static let sharedAPIManager = APIManager()
+    
+    // MARK: - Types
+    //FIX ME:
     enum VideoError: Error {
         case noDataAvailable
         case canNotProcessData
         case emptyData
     }
+    
+    // MARK: - Private API
+    
+    private init(){}
 
     // MARK: - Public API
     
-    func getVideos (completion: @escaping (Result<[Video],VideoError>) -> Void) {
-        
+    func fetchVideos(completion: @escaping (Result<[Video],VideoError>) -> Void) {
         let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
         
         guard let resourceURL = URL(string: resourceString) else {
-            fatalError()
+            return
         }
         
         let dataTask = URLSession.shared.dataTask(with: resourceURL) {
@@ -37,7 +44,7 @@ class APIManager {
             
             do {
                 let decoder = JSONDecoder()
-                let videosResponse = try decoder.decode(VideosResponse.self, from: jsonData)
+                let videosResponse = try decoder.decode(VideoContainer.self, from: jsonData)
                 guard let videosListNotNil = videosResponse.videos else {
                     completion(.failure(.emptyData))
                     return

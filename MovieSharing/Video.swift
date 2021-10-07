@@ -8,16 +8,9 @@
 import Foundation
 
 struct Video: Decodable {
-    
-    // MARK: - Types
-    
-    enum CodingKeys: String, CodingKey {
-        case videoId = "id"
-        case snippet
-    }
-    
+
     // MARK: - Properties
     
-    var videoId: String?
+    var id: String?
     var snippet: Snippet?
 }

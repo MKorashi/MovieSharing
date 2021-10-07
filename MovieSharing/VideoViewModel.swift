@@ -9,19 +9,14 @@ import Foundation
 
 class VideoViewModel: ObservableObject {
     
-    // MARK: - Properties
-    
-    private var apiService: APIManager
-    
     // MARK: - Public API
     
     init() {
-        self.apiService = APIManager()
-        getVideos()
+        fetchVideos()
     }
     
-    func getVideos(){
-        self.apiService.getVideos {
+    func fetchVideos(){
+        APIManager.sharedAPIManager.fetchVideos {
             (data) in print(data)
         }
     } 

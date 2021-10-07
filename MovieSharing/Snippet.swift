@@ -14,6 +14,6 @@ struct Snippet: Decodable {
     var publishedAt: String?
     var title: String?
     var description: String?
-    var thumbnails: Thumbnail?
+    var thumbnails: ThumbnailContainer?
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct VideosResponse: Decodable {
+struct VideoContainer: Decodable {
     
     // MARK: - Types
     
