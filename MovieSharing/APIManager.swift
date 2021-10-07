@@ -23,7 +23,7 @@ class APIManager {
     
     // MARK: - Private API
     
-    private init() {}
+    private init(){}
 
     // MARK: - Public API
     
