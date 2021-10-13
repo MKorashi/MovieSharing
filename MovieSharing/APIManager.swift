@@ -27,8 +27,8 @@ class APIManager {
 
     // MARK: - Public API
     
-    func fetchVideos(completion: @escaping (Result<[Video],VideoError>) -> Void) {
-        let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
+    func fetchVideos(resourceString: String, completion: @escaping (Result<[Video],VideoError>) -> Void) {
+        
         
         guard let resourceURL = URL(string: resourceString) else {
             return
