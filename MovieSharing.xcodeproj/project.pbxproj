@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC044AA827031F490037EBCB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA727031F490037EBCB /* Video.swift */; };
 		FC044AAA27044D5F0037EBCB /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC044AA927044D5F0037EBCB /* APIManager.swift */; };
+		FC287C2D27104E3500A082FD /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC287C2C27104E3500A082FD /* VideoManager.swift */; };
 		FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */; };
 		FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907A26FB4683002B26F3 /* ContentView.swift */; };
 		FCBE907D26FB4685002B26F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE907C26FB4685002B26F3 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		FC044AA727031F490037EBCB /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		FC044AA927044D5F0037EBCB /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		FC287C2C27104E3500A082FD /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		FCBE907526FB4683002B26F3 /* MovieSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSharingApp.swift; sourceTree = "<group>"; };
 		FCBE907A26FB4683002B26F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				FCFBD03D2706F85B00D8B9CB /* ThumbnailContainer.swift */,
 				FCFBD03F2706F87800D8B9CB /* ImageData.swift */,
 				FCFBD0412706F8CF00D8B9CB /* VideoViewModel.swift */,
+				FC287C2C27104E3500A082FD /* VideoManager.swift */,
 			);
 			path = MovieSharing;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				FCFBD03C2706F7E400D8B9CB /* Snippet.swift in Sources */,
 				FC044AA827031F490037EBCB /* Video.swift in Sources */,
 				FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */,
+				FC287C2D27104E3500A082FD /* VideoManager.swift in Sources */,
 				FCFBD0402706F87800D8B9CB /* ImageData.swift in Sources */,
 				FCFBD03E2706F85B00D8B9CB /* ThumbnailContainer.swift in Sources */,
 			);
