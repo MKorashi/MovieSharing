@@ -27,10 +27,10 @@ class APIManager {
 
     // MARK: - Public API
     
-    func fetchVideos(resourceString: String, completion: @escaping (Result<[Video],VideoError>) -> Void) {
+    func fetchVideos(url: String, completion: @escaping (Result<[Video],VideoError>) -> Void) {
         
         
-        guard let resourceURL = URL(string: resourceString) else {
+        guard let resourceURL = URL(string: url) else {
             return
         }
         

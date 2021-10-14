@@ -9,12 +9,19 @@ import Foundation
 
 class VideoManager{
     
-    func fetchVideos(){
+    // MARK: - Properties
+    
+    static let sharedVideoManager = VideoManager()
+    
+    // MARK: - Public API
+    
+    func fetchAllVideos(){
         
-        let resourceString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
+        let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
         
-        APIManager.shared.fetchVideos(resourceString: resourceString, {}){
-            //(data) in print(data)
+        APIManager.shared.fetchVideos(url: url){
+            (result) in print(result)
+            return
         }
         
     }
