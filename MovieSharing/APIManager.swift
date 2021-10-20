@@ -21,39 +21,41 @@ class APIManager {
         case emptyData
     }
     
+    // MARK: - Public API
+    
+    func fetchVideos(url: String, completion: @escaping (Result<VideoContainer,VideoError>) -> Void){
+        
+        fetchData(url: url){ result in
+            
+            do {
+                let videoData = try result.get()
+                let videosNotNil = try JSONDecoder().decode(VideoContainer.self, from: videoData)
+                completion(.success(videosNotNil))
+                
+            } catch {
+                completion(.failure(.noDataAvailable))
+            }
+        }
+    }
+    
     // MARK: - Private API
     
     private init() {}
-
-    // MARK: - Public API
     
-    func fetchVideos(url: String, completion: @escaping (Result<[Video],VideoError>) -> Void) {
-        
+    private func fetchData(url: String, completion: @escaping (Result<Data, VideoError>) -> Void) {
         
         guard let resourceURL = URL(string: url) else {
             return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: resourceURL) {
-            data, _, _ in
+        let dataTask = URLSession.shared.dataTask(with: resourceURL){
+            data, response, error in
             
             guard let jsonData = data else {
-                completion(.failure(.noDataAvailable))
+               completion(.failure(.noDataAvailable))
                 return
             }
-            
-            do {
-                let decoder = JSONDecoder()
-                let videosResponse = try decoder.decode(VideoContainer.self, from: jsonData)
-                guard let videosListNotNil = videosResponse.videos else {
-                    completion(.failure(.emptyData))
-                    return
-                }
-                completion(.success(videosListNotNil))
-            }
-            catch {
-                completion(.failure(.canNotProcessData))
-            }
+            completion(.success(jsonData))
         }
         dataTask.resume()
     }
