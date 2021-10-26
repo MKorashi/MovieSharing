@@ -7,13 +7,7 @@
 
 import Foundation
 
-class VideoManager{
-    
-    // MARK: - Types
-    //FIX ME:
-    enum VideoError: Error {
-        case emptyData
-    }
+class VideoManager {
     
     // MARK: - Properties
     
@@ -21,16 +15,16 @@ class VideoManager{
     
     // MARK: - Public API
     
-    func fetchAllVideos(completion: @escaping (Result<VideoContainer, Error>) -> Void){
+    func fetchAllVideos(completion: @escaping (Result<VideoContainer, Error>) -> Void) {
         
         let url = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLeagipoZmyfnIxkk9qKN-ewkuDeI-JP0i&key=AIzaSyB2WofOa5qg3RLlCnwGJ31Mw9O-PaKJS_8"
-        
-        APIManager.shared.fetchVideos(url: url){ (result) in
+
+        APIManager.shared.fetchVideos(url: url) { result in
             do {
                 let videos = try result.get()
                 completion(.success(videos))
-                
-            } catch {
+            }
+            catch {
                 completion(.failure(error))
             }
         }

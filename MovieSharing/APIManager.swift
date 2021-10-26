@@ -13,50 +13,24 @@ class APIManager {
     
     static let shared = APIManager()
     
-    // MARK: - Types
-    //FIX ME:
-    enum VideoError: Error {
-        case noDataAvailable
-        case canNotProcessData
-        case emptyData
-    }
-    
     // MARK: - Public API
     
-    func fetchVideos(url: String, completion: @escaping (Result<VideoContainer,VideoError>) -> Void){
-        
-        fetchData(url: url){ result in
-            
-            do {
-                let videoData = try result.get()
-                let videosNotNil = try JSONDecoder().decode(VideoContainer.self, from: videoData)
-                completion(.success(videosNotNil))
-                
-            } catch {
-                completion(.failure(.noDataAvailable))
-            }
-        }
+    func fetchVideos(url: String, completion: @escaping (Result<VideoContainer,NetworkingError>) -> Void) {
+        let videosRequest = VideosRequest(url: url, completion: completion)
+        fetchData(request: videosRequest)
     }
     
     // MARK: - Private API
     
     private init() {}
     
-    private func fetchData(url: String, completion: @escaping (Result<Data, VideoError>) -> Void) {
+    private func fetchData(request: Request) {
         
-        guard let resourceURL = URL(string: url) else {
+        guard let urlNotNil = request.url else {
             return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: resourceURL){
-            data, response, error in
-            
-            guard let jsonData = data else {
-               completion(.failure(.noDataAvailable))
-                return
-            }
-            completion(.success(jsonData))
-        }
+        let dataTask = URLSession.shared.dataTask(with: urlNotNil, completionHandler: request.handleResponseReceived)
         dataTask.resume()
     }
 }
