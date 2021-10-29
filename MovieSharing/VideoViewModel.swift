@@ -22,7 +22,8 @@ class VideoViewModel: ObservableObject {
             do{
                 let videos = try result.get()
                 print(videos)
-            } catch {
+            }
+            catch {
                 print(error)
             }
         }

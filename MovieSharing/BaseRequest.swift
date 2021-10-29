@@ -19,14 +19,12 @@ open class BaseRequest {
     // MARK: - Public API
     
     init(url: String, completion: @escaping (Result<VideoContainer,NetworkingError>) -> Void) {
-        
         self.url = URL(string: url)
         self.completion = completion
     }
 
     
     func handleResponseReceived(data: Data?, response: URLResponse?, error: Error?) {
-        
         guard let jsonData = data else {
             handleResponseProcessed(result: .failure(.noDataAvailable))
             return

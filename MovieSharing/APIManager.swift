@@ -25,7 +25,6 @@ class APIManager {
     private init() {}
     
     private func fetchData(request: BaseRequest) {
-        
         guard let urlNotNil = request.url else {
             return
         }
