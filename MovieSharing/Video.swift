@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Video: Decodable {
+struct Video: Decodable, Identifiable {
 
     // MARK: - Properties
     

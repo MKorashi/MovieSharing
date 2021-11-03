@@ -16,6 +16,16 @@ class VideoViewModel: ObservableObject {
     }
     
     func fetchVideos() {
-        VideoManager.sharedVideoManager.fetchAllVideos()
+        VideoManager.sharedVideoManager.fetchAllVideos(){
+            (result) in
+             
+            do{
+                let videos = try result.get()
+                print(videos)
+            }
+            catch {
+                print(error)
+            }
+        }
     } 
 }
