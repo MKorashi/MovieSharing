@@ -15,11 +15,11 @@ class VideosRequest: BaseRequest {
                 case .Failure(let networkingError): completion(.Failure(networkingError))
                 case .Success(let videoData):
                     let videosNotNil = try JSONDecoder().decode(VideoContainer.self, from: videoData as! Data)
-                    completion(.Success(videosNotNil))
+                invokeCompletion(result: .Success(videosNotNil))
                     break
             }
         } catch {
-            completion(.Failure(.canNotProcessData))
+            invokeCompletion(result: .Failure(.canNotProcessData))
         }
     }
 }

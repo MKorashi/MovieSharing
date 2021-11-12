@@ -22,7 +22,6 @@ open class BaseRequest {
         self.url = URL(string: url)
         self.completion = completion
     }
-
     
     func handleResponseReceived(data: Data?, response: URLResponse?, error: Error?) {
         guard let jsonData = data else {
@@ -35,4 +34,10 @@ open class BaseRequest {
     func handleResponseProcessed(result: Result) {
         
     }
+    
+    func invokeCompletion(result: Result) {
+           DispatchQueue.main.async{
+               self.completion (result)
+           }
+       }
 }
