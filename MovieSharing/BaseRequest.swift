@@ -13,12 +13,13 @@ open class BaseRequest {
     
     var url: URL?
     
-    //FIX ME: Generalize Result type: https://jira.tdsoftware.de/browse/TDSMSM-11
+ 
     var completion: (Result) -> Void
     
     // MARK: - Public API
     
     init(url: String, completion: @escaping (Result) -> Void) {
+
         self.url = URL(string: url)
         self.completion = completion
     }
@@ -33,6 +34,8 @@ open class BaseRequest {
     }
     
     func handleResponseProcessed(result: Result) {
-        
+
+
     }
+        
 }
