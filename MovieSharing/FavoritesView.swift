@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    
+    // MARK: - Properties
+    
     var body: some View {
         Text("Hello, Favorites!")
     }
 }
+
+// MARK: - Previews
 
 struct FavoritesView_Previews: PreviewProvider {
     static var previews: some View {

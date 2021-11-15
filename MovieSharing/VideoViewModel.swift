@@ -10,13 +10,14 @@ import SwiftUI
 
 class VideoViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var isLoading: Bool = false
-    @Published var videos: [Video] = []
+    @Published var videos: Any?
     
     // MARK: - Public API
     
     init() {
-        
         fetchVideos()
     }
     
@@ -24,28 +25,18 @@ class VideoViewModel: ObservableObject {
         self.isLoading = true
         print(String(self.isLoading))
         VideoManager.sharedVideoManager.fetchAllVideos() { result in
-            print(result)
-            print(String(self.isLoading))
-            print(self.videos)
-            
             switch (result){
-                
-            case .Success(let videos):
-                
-                    //self.videos = videosNotNil
+                case .Success(let videos):
+                    guard let videosNotNil = videos as? VideoContainer else {
+                        return
+                    }
+                    self.videos = videosNotNil
                     self.isLoading = false
+                    break
 
-                print(String(self.isLoading))
-                break
-                
-            default:
-                break
-                
+                default:
+                    break
             }
         }
-    }
-    
-    func fetchVideosIfNeeded() {
-        
     }
 }

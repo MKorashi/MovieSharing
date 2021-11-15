@@ -9,23 +9,21 @@ import SwiftUI
 
 struct LoadingView: View {
     
-    @State var animate = false
+    // MARK: - Properties
     
     var body: some View {
         
-        VStack{
+        VStack {
             
             ProgressView().scaleEffect(2.0, anchor: .center)
             
             Text("Loading movies")
                 .padding()
         }
-        .onAppear{
-            
-        }
-        
     }
 }
+
+// MARK: - Previews
 
 struct Loader_Previews: PreviewProvider {
     static var previews: some View {

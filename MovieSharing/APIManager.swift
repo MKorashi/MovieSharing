@@ -28,7 +28,6 @@ class APIManager {
         guard let urlNotNil = request.url else {
             return
         }
-        
         let dataTask = URLSession.shared.dataTask(with: urlNotNil, completionHandler: request.handleResponseReceived)
         dataTask.resume()
     }

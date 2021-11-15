@@ -9,13 +9,16 @@ import Foundation
 
 class VideosRequest: BaseRequest {
     
+    // MARK: - Public API
+    
     override func handleResponseProcessed(result: Result) {
         do {
             switch result {
-                case .Failure(let networkingError): completion(.Failure(networkingError))
+                case .Failure(let networkingError):
+                    completion(.Failure(networkingError))
                 case .Success(let videoData):
                     let videosNotNil = try JSONDecoder().decode(VideoContainer.self, from: videoData as! Data)
-                invokeCompletion(result: .Success(videosNotNil))
+                    invokeCompletion(result: .Success(videosNotNil))
                     break
             }
         } catch {

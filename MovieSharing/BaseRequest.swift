@@ -12,8 +12,6 @@ open class BaseRequest {
     // MARK: - Properties
     
     var url: URL?
-    
-    //FIX ME: Generalize Result type: https://jira.tdsoftware.de/browse/TDSMSM-11
     var completion: (Result) -> Void
     
     // MARK: - Public API

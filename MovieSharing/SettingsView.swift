@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    // MARK: - Properties
+    
     var body: some View {
         Text("Hello, Settings!")
     }
 }
+
+// MARK: - Previews
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {

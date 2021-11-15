@@ -9,37 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var videoVM = VideoViewModel()
-    
     // MARK: - Properties
     
+    @StateObject private var videoVM = VideoViewModel()
+    
     var body: some View {
-        
-        ZStack{
-            NavigationView{
+        ZStack(alignment: .top) {
                 if videoVM.isLoading {
                     ZStack {
                         Color(.gray).opacity(0.4).ignoresSafeArea()
                         LoadingView()
-                        
                     }
                     
                 } else {
-                    ZStack{
                         MainView()
-                    }
-                    
                 }
-                    
-
-                
-            }
-            
-            
-        }
-        .onAppear{
-            
-            
         }
     }
 }

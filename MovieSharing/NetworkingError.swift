@@ -7,7 +7,6 @@
 
 import Foundation
 
-//FIX ME: https://jira.tdsoftware.de/browse/TDSMSM-6
 enum NetworkingError: Error {
     case noDataAvailable
     case canNotProcessData
