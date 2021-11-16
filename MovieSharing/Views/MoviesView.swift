@@ -12,17 +12,19 @@ struct MoviesView: View {
     // MARK: - Properties
     
     @State private var selectedView = "Grid"
-    @StateObject private var videoVM = VideoViewModel()
+   // @StateObject private var videoVM = VideoViewModel()
     
     var body: some View {
         VStack {
             Picker("", selection: $selectedView) {
                 Text("Grid").tag("Grid")
                 Text("List").tag("List")
+            }.pickerStyle(.segmented).padding()
+            if selectedView == "Grid" {
+                MoviesGridView()
+            } else {
+                MoviesListView()
             }
-                .pickerStyle(.segmented)
-                
-            Text(selectedView)
             Spacer()
         }
 }

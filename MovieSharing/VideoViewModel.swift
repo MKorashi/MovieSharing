@@ -13,7 +13,7 @@ class VideoViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var isLoading: Bool = false
-    @Published var videos: Any?
+    @Published var videos: [Video]?
     
     // MARK: - Public API
     
@@ -23,14 +23,14 @@ class VideoViewModel: ObservableObject {
     
     func fetchVideos() {
         self.isLoading = true
-        print(String(self.isLoading))
         VideoManager.sharedVideoManager.fetchAllVideos() { result in
             switch (result){
                 case .Success(let videos):
                     guard let videosNotNil = videos as? VideoContainer else {
                         return
                     }
-                    self.videos = videosNotNil
+                    
+                self.videos = self.filterVideos(videos: videosNotNil.videos!)
                     self.isLoading = false
                     break
 
@@ -38,5 +38,15 @@ class VideoViewModel: ObservableObject {
                     break
             }
         }
+    }
+    
+    func filterVideos(videos: [Video]) -> [Video] {
+        var filteredVideos = [] as [Video]
+        for video in videos {
+            if (video.snippet?.title != "Deleted video"){
+                filteredVideos.append(video)
+            }
+        }
+        return filteredVideos
     }
 }
