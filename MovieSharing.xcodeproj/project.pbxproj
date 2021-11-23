@@ -90,9 +90,9 @@
 		FC72D07327431CC0004E8E1E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCBE907A26FB4683002B26F3 /* ContentView.swift */,
 				FC8257E427354B6B00B45D52 /* MainView.swift */,
 				FC8257E6273A8A0500B45D52 /* MoviesView.swift */,
-				FCBE907A26FB4683002B26F3 /* ContentView.swift */,
 				FC8257E22732841E00B45D52 /* LoadingView.swift */,
 				FC8257EA273A8B6C00B45D52 /* SettingsView.swift */,
 				FC8257E8273A8A1500B45D52 /* FavoritesView.swift */,

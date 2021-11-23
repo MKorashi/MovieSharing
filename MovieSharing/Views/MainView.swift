@@ -13,9 +13,12 @@ struct MainView: View {
     
     @State var selection = 0
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(Color.gray.opacity(0.3))
+    }
+    
     var body: some View {
-       // Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        VStack{
+        VStack {
             TabView(selection: $selection) {
                 MoviesView()
                     .tabItem {
@@ -34,7 +37,7 @@ struct MainView: View {
                             Image("FavoritesDisabled")
                         }
                         Text("Favorites")
-                        }.tag(1)
+                    }.tag(1)
                 SettingsView()
                     .tabItem {
                         if selection == 2 {
@@ -43,7 +46,7 @@ struct MainView: View {
                             Image("SettingsDisabled")
                         }
                         Text("Settings")
-                        }.tag(2)
+                    }.tag(2)
             }
         }
     }

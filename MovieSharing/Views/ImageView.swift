@@ -9,26 +9,33 @@ import Combine
 import SwiftUI
 
 struct ImageView: View {
+    
+    // MARK: - Properties
+    
     @ObservedObject var imageLoader:ImageLoader
     @State var image:UIImage = UIImage()
     
-init(withURL url:String) {
+    init(withURL url:String) {
         imageLoader = ImageLoader(urlString:url)
     }
     
-var body: some View {
-    VStack {
-        Image(uiImage: image)
-            .aspectRatio(contentMode: .fit)
-            .background(Color(.black)) //for padding
-            .cornerRadius(10)
-            .shadow(color: .gray.opacity(0.5), radius: 5, y: 10)
+    var body: some View {
+        VStack {
+            Image(uiImage: image)
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 180)
+                .background(Color(.black)) //for padding
+                .cornerRadius(10)
+                .shadow(color: .gray.opacity(0.5), radius: 5, y: 10)
             
-    }.onReceive(imageLoader.dataPublisher) { data in
-        self.image = UIImage(data: data) ?? UIImage()
+        }.onReceive(imageLoader.dataPublisher) { data in
+            self.image = UIImage(data: data) ?? UIImage()
     }
   }
 }
+
+// MARK: - Previews
+
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
         ImageView(withURL: "")

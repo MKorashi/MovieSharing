@@ -40,7 +40,9 @@ class VideoViewModel: ObservableObject {
         }
     }
     
-    func filterVideos(videos: [Video]) -> [Video] {
+    // MARK: - Private API
+    
+   private func filterVideos(videos: [Video]) -> [Video] {
         var filteredVideos = [] as [Video]
         for video in videos {
             if (video.snippet?.title != "Deleted video"){

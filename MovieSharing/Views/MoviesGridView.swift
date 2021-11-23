@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct MoviesGridView: View {
+    
+    // MARK: - Properties
+    
     var body: some View {
-        Text("Hello, Grid!")
+        VStack{
+            Text("Hello, Grid!")
+            //Spacer()
+        }
+        
     }
 }
+
+// MARK: - Previews
 
 struct MoviesGridView_Previews: PreviewProvider {
     static var previews: some View {

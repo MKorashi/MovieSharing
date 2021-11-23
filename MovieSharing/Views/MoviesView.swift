@@ -12,22 +12,25 @@ struct MoviesView: View {
     // MARK: - Properties
     
     @State private var selectedView = "Grid"
-   // @StateObject private var videoVM = VideoViewModel()
-    
     var body: some View {
+        //ZStack(alignment: .topLeading, content: <#T##() -> _#>)
         VStack {
             Picker("", selection: $selectedView) {
                 Text("Grid").tag("Grid")
                 Text("List").tag("List")
-            }.pickerStyle(.segmented).padding()
+            }.pickerStyle(.segmented)
+                
             if selectedView == "Grid" {
                 MoviesGridView()
             } else {
                 MoviesListView()
             }
-            Spacer()
-        }
-}
+           // Spacer()
+        }//.background(Color.red)
+        .frame(height: UIScreen.main.bounds.height,
+               alignment: .top)
+        .padding(.top, 120)
+    }
     
 // MARK: - Previews
 
@@ -35,6 +38,5 @@ struct MoviesView_Previews: PreviewProvider {
     static var previews: some View {
         MoviesView()
     }
-}
-
+    }
 }

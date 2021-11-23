@@ -12,11 +12,8 @@ struct LoadingView: View {
     // MARK: - Properties
     
     var body: some View {
-        
         VStack {
-            
             ProgressView().scaleEffect(2.0, anchor: .center)
-            
             Text("Loading movies")
                 .padding()
         }
