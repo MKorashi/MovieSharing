@@ -13,12 +13,13 @@ open class BaseRequest {
     
     var url: URL?
     
-    //FIX ME: Generalize Result type: https://jira.tdsoftware.de/browse/TDSMSM-11
-    var completion: (Result<VideoContainer,NetworkingError>) -> Void
+ 
+    var completion: (Result) -> Void
     
     // MARK: - Public API
     
-    init(url: String, completion: @escaping (Result<VideoContainer,NetworkingError>) -> Void) {
+    init(url: String, completion: @escaping (Result) -> Void) {
+
         self.url = URL(string: url)
         self.completion = completion
     }
@@ -26,13 +27,15 @@ open class BaseRequest {
     
     func handleResponseReceived(data: Data?, response: URLResponse?, error: Error?) {
         guard let jsonData = data else {
-            handleResponseProcessed(result: .failure(.noDataAvailable))
+            handleResponseProcessed(result: .Failure(.noDataAvailable))
             return
         }
-        handleResponseProcessed(result: .success(jsonData))
+        handleResponseProcessed(result: .Success(jsonData))
     }
     
-    func handleResponseProcessed(result: Result<Data, NetworkingError>) {
-        
+    func handleResponseProcessed(result: Result) {
+
+
     }
+        
 }

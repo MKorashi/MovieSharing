@@ -13,6 +13,7 @@
 		FC8257D9272046A000B45D52 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8257D8272046A000B45D52 /* BaseRequest.swift */; };
 		FC8257DB2722FDCA00B45D52 /* VideosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8257DA2722FDCA00B45D52 /* VideosRequest.swift */; };
 		FC8257DD2727FD7600B45D52 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8257DC2727FD7600B45D52 /* NetworkingError.swift */; };
+		FC8257DF27293B5000B45D52 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8257DE27293B5000B45D52 /* Result.swift */; };
 		FCBE907926FB4683002B26F3 /* MovieSharingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */; };
 		FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBE907A26FB4683002B26F3 /* ContentView.swift */; };
 		FCBE907D26FB4685002B26F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBE907C26FB4685002B26F3 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		FC8257D8272046A000B45D52 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		FC8257DA2722FDCA00B45D52 /* VideosRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosRequest.swift; sourceTree = "<group>"; };
 		FC8257DC2727FD7600B45D52 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		FC8257DE27293B5000B45D52 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FCBE907526FB4683002B26F3 /* MovieSharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBE907826FB4683002B26F3 /* MovieSharingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSharingApp.swift; sourceTree = "<group>"; };
 		FCBE907A26FB4683002B26F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 		FCBE906C26FB4682002B26F3 = {
 			isa = PBXGroup;
 			children = (
-				FC8257DC2727FD7600B45D52 /* NetworkingError.swift */,
 				FCBE907726FB4683002B26F3 /* MovieSharing */,
 				FCBE907626FB4683002B26F3 /* Products */,
 			);
@@ -90,6 +91,8 @@
 				FCFBD0412706F8CF00D8B9CB /* VideoViewModel.swift */,
 				FC287C2C27104E3500A082FD /* VideoManager.swift */,
 				FC8257DA2722FDCA00B45D52 /* VideosRequest.swift */,
+				FC8257DC2727FD7600B45D52 /* NetworkingError.swift */,
+				FC8257DE27293B5000B45D52 /* Result.swift */,
 			);
 			path = MovieSharing;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				FCFBD0422706F8CF00D8B9CB /* VideoViewModel.swift in Sources */,
 				FCBE907B26FB4683002B26F3 /* ContentView.swift in Sources */,
 				FC044AAA27044D5F0037EBCB /* APIManager.swift in Sources */,
+				FC8257DF27293B5000B45D52 /* Result.swift in Sources */,
 				FC8257D9272046A000B45D52 /* BaseRequest.swift in Sources */,
 				FC8257DD2727FD7600B45D52 /* NetworkingError.swift in Sources */,
 				FCFBD03C2706F7E400D8B9CB /* Snippet.swift in Sources */,

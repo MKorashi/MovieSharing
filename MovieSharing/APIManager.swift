@@ -15,7 +15,7 @@ class APIManager {
     
     // MARK: - Public API
     
-    func fetchVideos(url: String, completion: @escaping (Result<VideoContainer,NetworkingError>) -> Void) {
+    func fetchVideos(url: String, completion: @escaping (Result) -> Void) {
         let videosRequest = VideosRequest(url: url, completion: completion)
         fetchData(request: videosRequest)
     }
